@@ -1,0 +1,68 @@
+.board{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #0054B6;
+    width: 660px;
+    height: 660px;
+    margin-bottom: 60px;
+}
+
+.numericOrdinatesPre{
+    height: 60px;
+    width: 660px;
+    background: #D9D9D9;
+}
+
+
+.alphabeticOrdinatesPre{
+    height: 660px;
+    width: 60px;
+    background: #D9D9D9;
+}
+
+.handlePatroller{
+    display: flex;
+    width: 120px;
+    height: 60px;
+    background: gray;
+    align-items: center;
+    justify-content: center
+}
+
+.handleSubmarine{
+    display: flex;
+    width: 180px;
+    height: 60px;
+    background: gray;
+    align-items: center;
+    justify-content: center
+}
+
+.handleDestroyer{
+    display: flex;
+    width: 180px;
+    height: 60px;
+    background: gray;
+    align-items: center;
+    justify-content: center
+}
+
+.handleBattleship{
+    display: flex;
+    width: 240px;
+    height: 60px;
+    background: gray;
+    align-items: center;
+    justify-content: center
+}
+
+.handleCarrier{
+    display: flex;
+    width: 300px;
+    height: 60px;
+    background: gray;
+    align-items: center;
+    justify-content: center
+}

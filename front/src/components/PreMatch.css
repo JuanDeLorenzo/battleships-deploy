@@ -1,0 +1,28 @@
+.prepareBoard{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+.board{
+    justify-self: center;
+    position: absolute;
+}
+
+.confirmShips{
+    background-color: #D9D9D9;
+    width: 100px;
+    height: 50px;
+    border: black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.prepareButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "battleships-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "../node_modules/.bin/jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^10.0.0",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
