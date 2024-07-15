@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => onDisconnect(socket))
 
 })
-
-server.listen(8081, () => {
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
     console.log('Socket.io is running')
 })
