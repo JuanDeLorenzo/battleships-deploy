@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
-        const newSocket = io('http://battleships-dpoi.vercel.app');
+        const newSocket = io('https://battleships-deploy.onrender.com');
         setSocket(newSocket);
 
         return () => newSocket.close();
