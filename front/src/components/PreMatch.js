@@ -10,6 +10,7 @@ const PreMatch = () => {
     const navigate = useNavigate();
     const [showElements, setShowElements] = useState(true);
     const [opponentDisconnected, setOpponentDisconnected] = useState(false);
+    const [waitingForOpponent, setWaitingForOpponent] = useState(false);
     const { user } = useUser()
     const socket = useSocket();
     const { setShipsGrid, gameId } = useGame();
@@ -42,6 +43,7 @@ const PreMatch = () => {
 
     const handleConfirmShipsClick = () => {
         setShowElements(false);
+        setWaitingForOpponent(true);
         const shipPositions = Array.from(ships.values()).flatMap(posList => posList);
         console.log(shipPositions)
         socket.emit('placeShips', { gameId, userId: user.id, shipPositions });
@@ -63,7 +65,10 @@ const PreMatch = () => {
     return (<> {showElements? (<div className="prepareBoard" >
         <PreBoard ships={ships}></PreBoard>
         <div className="confirmShips" onClick={handleConfirmShipsClick}>Confirm</div>
-    </div>): null}
+    </div>) : waitingForOpponent ? (
+        <div className="RandomMatchMakingScreen">
+            <h3>Waiting for opponent to confirm...</h3>
+        </div>) : null}
         {opponentDisconnected && (
                 <div className="finishedGameSign">
                     <div className="winOrLoseMessage">Opponent disconnected</div>
