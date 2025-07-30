@@ -1,0 +1,22 @@
+.tableContainer{
+    background-color: #D9D9D9;
+    border: 2px solid black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tableCell{
+    border-right: 1px solid #808080;
+    text-align: center !important;
+    padding: 1px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Keania One', sans-serif !important;
+    color: black;
+}

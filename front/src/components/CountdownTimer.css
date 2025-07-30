@@ -1,0 +1,12 @@
+.countdownTimer{
+    font-family: 'Keania One', sans-serif;
+    font-size: xxx-large;
+    background-color: #D9D9D9;
+    width: 150px;
+    height: 75px;
+    border: black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
