@@ -9,7 +9,11 @@ import cors from 'cors'
 const app = express()
 const server = http.createServer(app)
 const port = process.env.PORT
-app.use(cors({ origin: "http://localhost:3000"}))
+app.use(cors({ origin: [
+        "http://localhost:3000",
+        "battleships-deploy-client.vercel.app"
+    ]
+}))
 app.use(express.json())
 
 const io = new Server(server, {
