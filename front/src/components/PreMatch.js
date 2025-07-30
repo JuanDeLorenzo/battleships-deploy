@@ -314,7 +314,7 @@ const PreMatch = () => {
         const shipPositions = Array.from(newShipPositions.values()).flatMap(posList => posList);
         console.log("Ship Positions:", shipPositions);
         console.log("Final Ships Grid:", shipsGrid);
-        socket.emit('placeShips', { gameId: gameId, userId: user.id, shipPositions });
+        socket.emit('placeShips', { gameId: gameId, userId: user.emailAddresses[0].emailAddress, shipPositions });
         setShipsGrid(shipsGrid);
     }
 
