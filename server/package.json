@@ -4,12 +4,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./src/index.js",
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "init-db": "node src/scripts/init-db.js",
+    "add-mock-data": "node src/scripts/add-mock-data.js",
     "test": "../node_modules/.bin/jest"
   },
   "dependencies": {
     "axios": "^1.6.8",
     "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
     "express": "^4.19.2",
     "pg": "^8.11.5",
     "socket.io": "^4.7.5",

@@ -12,7 +12,7 @@ function App() {
   return (
       <div className="App">
           <SignedOut>
-              <Landing landingScreen></Landing>
+              <Landing LandingScreen></Landing>
           </SignedOut>
 
           <SignedIn>
@@ -21,8 +21,8 @@ function App() {
                   <>
                       <Route element={<GameRoutes />}>
                           <Route path="/random-match-making" element={<RandomMatchMaking/>}/>
-                          <Route path="/prematch" element={<PreMatch/>}/>
-                          <Route path="/match" element={<Match/>}/>
+                          <Route path="/pre-match/:gameId" element={<PreMatch/>}/>
+                          <Route path="/match/:gameId" element={<Match/>}/>
                       </Route>
                   </>
               </Routes>

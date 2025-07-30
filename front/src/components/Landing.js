@@ -1,8 +1,7 @@
-import {SignInButton} from "@clerk/clerk-react";
+import {SignInButton, useAuth, useUser} from "@clerk/clerk-react";
 
+const LandingScreen = () => {
 
-
-const landingScreen = () => {
     return <div className="LandingScreen">
         <h1>Battleships</h1>
         <SignInButton>
@@ -11,4 +10,4 @@ const landingScreen = () => {
     </div>
 }
 
-export default landingScreen
+export default LandingScreen

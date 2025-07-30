@@ -1,25 +1,15 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useMemo } from 'react';
 import { io } from 'socket.io-client';
 
-const SocketContext = createContext();
-
-export const useSocket = () => {
-    return useContext(SocketContext);
-};
+const SocketContext = createContext(null);
 
 export const SocketProvider = ({ children }) => {
-    const [socket, setSocket] = useState(null);
-
-    useEffect(() => {
-        const newSocket = io('https://battleships-deploy.onrender.com');
-        setSocket(newSocket);
-
-        return () => newSocket.close();
-    }, []);
-
-    return (
-        <SocketContext.Provider value={socket}>
-            {children}
-        </SocketContext.Provider>
-    );
+  const socket = useMemo(() => io('http://localhost:5800'), []);
+  return (
+    <SocketContext.Provider value={socket}>
+      {children}
+    </SocketContext.Provider>
+  );
 };
+
+export const useSocket = () => useContext(SocketContext);
