@@ -51,7 +51,7 @@ class GameService {
     areShipsPlaced(gameId) {
         const game = this.games[gameId];
         if (!game) {
-            throw new Error("Invalid game");
+            return true
         }
         // check for each board if it has any 'S'
         return game.players.every(player => game.boards[player].some(row => row.includes('S')));
